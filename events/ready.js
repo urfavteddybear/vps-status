@@ -54,13 +54,13 @@ Uptime : ${moment(node.stats.uptime).format(
                     { name: "**Uptime**", value: `\`\`\`nim\n${uptimer(uptime)}\`\`\``, inline: true }
                 ])
                 .setColor("#2F3136")
-                .setFooter({ text: `Update at ` })
+                .setFooter({ text: `Updated every 30 seconds` })
                 .setTimestamp(Date.now());
             msg.edit({ embeds: [rembed] });
 
 
 
-        }, 5000);
+        }, 30000);
     })
 
 }
