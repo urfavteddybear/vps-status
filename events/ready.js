@@ -36,15 +36,6 @@ module.exports = async (client, message) => {
 
                 .setDescription(`__**Server Information**__`)
                 .addFields([
-                    {
-                        name: "**Lavalink**", value: `\`\`\`nim\n${client.manager.nodes.map((node) =>
-                            `Node : ${node.connected ? "🟢" : "🔴"} ${node.options.identifier}
-Memory Usage : ${formatBytes(node.stats.memory.allocated)} - ${node.stats.cpu.lavalinkLoad.toFixed(2)}%
-Connections : ${node.stats.playingPlayers} / ${node.stats.players}
-Uptime : ${moment(node.stats.uptime).format(
-    "D[ days], H[ hours], M[ minutes], S[ seconds]"
-  )}`)}\`\`\``, inline: true
-                    },
 
                     { name: "**CPU**", value: `\`\`\`nim\nCpu: ${cpudata.manufacturer + " " + cpudata.brand}\nLoad: ${cl.currentLoad.toFixed(2)}%\nCores: ${cpudata.cores}\nPlatform: ${osdata.platform}\`\`\``, inline: true },
                     { name: "**RAM**", value: `\`\`\`nim\nAvailable: ${pretty(memdata.total)}\nMemory Used: ${pretty(memdata.active)}\`\`\``, inline: true },
