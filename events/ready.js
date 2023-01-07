@@ -39,7 +39,7 @@ module.exports = async (client, message) => {
 
                     { name: "**CPU**", value: `\`\`\`nim\nCpu: ${cpudata.manufacturer + " " + cpudata.brand}\nLoad: ${cl.currentLoad.toFixed(2)}%\nCores: ${cpudata.cores}\nPlatform: ${osdata.platform}\`\`\``, inline: true },
                     { name: "**RAM**", value: `\`\`\`nim\nAvailable: ${pretty(memdata.total)}\nMemory Used: ${pretty(memdata.active)}\`\`\``, inline: true },
-                    { name: "**DISK**", value: `\`\`\`nim\nDisk Used: ${pretty(diskdata[0].size)} / ${pretty(diskdata[0].used)}\`\`\``, inline: true },
+                    { name: "**DISK**", value: `\`\`\`nim\nDisk Used: ${pretty(diskdata[0].used)} / ${pretty(diskdata[0].size)}\`\`\``, inline: true },
                     { name: "**NETWORK**", value: `\`\`\`nim\nPing: ${Math.round(netdata[0].ms)}ms\nUp: ${pretty(netdata[0].tx_sec)}/s\nDown: ${pretty(netdata[0].rx_sec)}/s\n\nTotal Up: ${pretty(netdata[0].tx_bytes)}\nTotal Down: ${pretty(netdata[0].rx_bytes)}\`\`\`` },
                     { name: "**Discord API websocket ping**", value: `\`\`\`nim\n${Math.round(client.ws.ping)}ms\`\`\``, inline: true },
                     { name: "**Uptime**", value: `\`\`\`nim\n${uptimer(uptime)}\`\`\``, inline: true }
