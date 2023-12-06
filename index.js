@@ -1,6 +1,6 @@
 const { Client, Intents } = require("discord.js");
 const { readdirSync } = require("fs");
-const config = require("./confi.json");
+const config = require("./config.json");
 const { Manager } = require("erela.js");
 
 const client = new Client({
