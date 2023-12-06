@@ -1,5 +1,5 @@
 const { Client, MessageEmbed } = require("discord.js");
-const { channelId } = require("../confi.json");
+const { channelId } = require("../config.json");
 const si = require('systeminformation');
 const os = require("os");
 const pretty = require('prettysize');
